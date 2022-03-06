@@ -1,0 +1,45 @@
+﻿@page "/findBikes"
+@using MyBikeResults.Domain.Entities;
+<h3>Our current list of bikes</h3>
+<br />
+<html>
+<head>
+
+</head>
+<body>
+    
+    <div>
+            <MudDataGrid MultiSelection="true" Items="@bikeResults" Sortable="true" Filterable="true" QuickFilter="@_quickFilter">
+                <ToolBarContent>
+                    <MudText Typo="Typo.h6">Bikes</MudText>
+                    <MudSpacer />
+                    <MudTextField @bind-Value="_searchString" Placeholder="Search" Adornment="Adornment.Start" Immediate="true"
+                                  AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                </ToolBarContent>
+                <Columns>
+                    <Column T="Bike" Field="BikeID" Title="Id" />
+                    <Column T="Bike" Field="Make" />
+                    <Column T="Bike" Field="Model" />
+                    <Column T="Bike" Field="Year" />
+                    <Column T="Bike" Field="Price" />
+                    <Column T="Bike" Field="Terrain" />
+                    <Column T="Bike" Field="Description" />
+                </Columns>
+                <PagerContent>
+                    <MudDataGridPager T="Bike" />
+                </PagerContent>
+            </MudDataGrid>
+        </div>
+
+    <div style="padding-top:30px">
+        <h5>Button text placeholder</h5>
+        <br />
+        <input @bind-value="_btnText" type="text" id="btnText" name="btnTxt" placeholder="Btn placeholder text..">
+    </div>
+    <div align="center">
+        <button class="button-64" role="button">
+            <span class="text"> @_btnText</span>
+        </button>
+    </div>
+</body>
+</html>
