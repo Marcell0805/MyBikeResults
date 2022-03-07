@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
+
+//This is the implementation of the bike interface
+//These methods will cater for most CRUD functions
 namespace MyBikeResults.Service.Implementation
 {
     public class BikeService : IBikeService
@@ -34,14 +37,24 @@ namespace MyBikeResults.Service.Implementation
         {
             throw new NotImplementedException();
         }
-
+        //This method is responsible for reading the JSON file and returning the results
         public async Task<IEnumerable<Bike>> GetAll()
         {
-            List<Bike> tests = new();
-            string bikeJson = File.ReadAllText(@"Seeds" + Path.DirectorySeparatorChar + "bikes_response.json");
-            tests = JsonConvert.DeserializeObject<List<Bike>>(bikeJson);
-            return tests;
-            //return await _repository.GetAll();
+            try
+            {
+                List<Bike> tests = new();
+                string bikeJson = await File.ReadAllTextAsync(@"Seeds" + Path.DirectorySeparatorChar + "bikes_response.json");
+                tests = JsonConvert.DeserializeObject<List<Bike>>(bikeJson);
+                return tests;
+            }
+            catch (IOException e)
+            {
+                throw e;
+            }
+            catch(Exception e)
+            {
+                throw;
+            }
         }
 
         public Task<IEnumerable<Bike>> GetByCriteria(object a)

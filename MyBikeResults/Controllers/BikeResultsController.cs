@@ -35,9 +35,17 @@ namespace MyBikeResults.Controllers
         [HttpGet("GetAllData", Name = "getData")]
         public async Task<IEnumerable<Bike>> GetAll()
         {
-            var result = await _bikeService.GetAll();
-            result=result.OrderBy(x => x.Make).ThenBy(x => x.Model);
-            return result;
+            try
+            {
+                var result = await _bikeService.GetAll();
+                result = result.OrderBy(x => x.Make).ThenBy(x => x.Model);
+                return result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyBikeResults.Domain.Entities
+﻿namespace MyBikeResults.Domain.Entities
 {
+    //These are the entities that I excpect to retrieve from the JSON file
     public class Bike
     {
         public int BikeID { get; set; }

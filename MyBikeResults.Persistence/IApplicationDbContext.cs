@@ -6,8 +6,8 @@ namespace MyBikeResults.Persistence
 {
     public interface IApplicationDbContext
     {
+        //The interface for the DB set for bikes
         public DbSet<Bike> Bikes { get; set; }
-
         Task<int> SaveChangesAsync();
     }
 }

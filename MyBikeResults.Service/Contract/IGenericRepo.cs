@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 
 namespace MyBikeResults.Service.Contract
 {
+    //This is a generic repository interface that has the most common methods that can be used
     public interface IGenericRepo<T> where T : class
     {
         Task<IEnumerable<T>> GetAll();

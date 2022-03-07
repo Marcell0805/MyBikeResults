@@ -9,6 +9,7 @@ namespace MyBikeResults.Domain.Settings
     public class AppSettings
     {
         public ApplicationDetail ApplicationDetail { get; set; }
+        //This is the route of where the API will sit
         public string ApiBaseUrl { get; set; }
     }
 }

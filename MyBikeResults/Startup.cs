@@ -47,7 +47,7 @@ namespace MyBikeResults
             services.AddAutoMapper();
 
             services.AddScopedServices();
-
+            //This will implement the interfaces that will be required in the REST services
             services.AddTransientServices();
 
             services.AddSwaggerOpenAPI();           

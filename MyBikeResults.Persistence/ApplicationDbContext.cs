@@ -18,7 +18,7 @@ namespace MyBikeResults.Persistence
         }
 
         public DbSet<Bike> Bikes{ get; set; }
-
+        //The seed method would have replaced the in memory data to a database on intial migration
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

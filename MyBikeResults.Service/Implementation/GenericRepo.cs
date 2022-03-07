@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+//This is the implementation of the generic interface
+//These methods will be used through any object that will use the standard methods
 namespace BikesResponse.Service.Implementation
 {
     public class GenericRepo<T> : IGenericRepo<T> where T : class
