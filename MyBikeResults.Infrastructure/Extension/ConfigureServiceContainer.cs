@@ -9,6 +9,7 @@ using MyBikeResults.Persistence;
 using MyBikeResults.Service.Contract;
 using MyBikeResults.Service.Implementation;
 using System;
+using System.IO;
 
 namespace MyBikeResults.Infrastructure.Extension
 {
@@ -67,6 +68,8 @@ namespace MyBikeResults.Infrastructure.Extension
                             Url = new Uri("https://github.com/Marcell0805")
                         }
                     });
+                var filePath = Path.Combine(AppContext.BaseDirectory, "MyBikeResults.Infrastructure.xml");
+                setupAction.IncludeXmlComments(filePath,includeControllerXmlComments:true);
             });
 
         }
