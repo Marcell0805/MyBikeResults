@@ -1,14 +1,10 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using MyBikeResults.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BikeResults.Web.Pages
 {
-    public partial class BikeResultsJS
+    public partial class JSInterop
     {
         [Inject]
         public IJSRuntime JSRuntime { get; set; }
@@ -19,7 +15,8 @@ namespace BikeResults.Web.Pages
         }
         public async Task ReadData()
         {
-            await _jsModule.InvokeVoidAsync("readJson", "JS function called from .NET");
+            await _jsModule.InvokeVoidAsync("JSMethod");
         }
+       
     }
 }

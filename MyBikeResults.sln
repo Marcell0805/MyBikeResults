@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBikeResults.Test.Integrat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBikeResults.Test.Unit", "MyBikeResults.Test.Unit\MyBikeResults.Test.Unit.csproj", "{EA7857DC-1125-4BBE-97B3-7DEC0AF7A240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeResults.Web", "MyBikeResults.Web\BikeResults.Web\BikeResults.Web.csproj", "{7F0314E7-4397-42FB-ACDC-DB16237CAF84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeResults.Web", "MyBikeResults.Web\BikeResults.Web\BikeResults.Web.csproj", "{7F0314E7-4397-42FB-ACDC-DB16237CAF84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
