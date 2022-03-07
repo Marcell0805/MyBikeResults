@@ -85,5 +85,4 @@ export function JSMethod()
         );
         document.body.insertBefore(p, myList);
     });
-
 }
